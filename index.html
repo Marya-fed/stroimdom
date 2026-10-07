@@ -445,11 +445,18 @@
         }
 
         /* MANIFESTO / ABOUT */
-        .manifesto {
-            background: var(--surface-color);
-            text-align: center;
-            padding: 140px 0;
-        }
+.manifesto {
+    /* Затемняем картинку на 50% с помощью linear-gradient */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photo1.jfif'); 
+    
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    text-align: center;
+    padding: 140px 0;
+    color: #ffffff; /* Делаем текст внутри блока белым */
+}
 
         .manifesto blockquote {
             font-family: 'Playfair Display', serif;
