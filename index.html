@@ -235,50 +235,61 @@
             line-height: 1.2;
         }
 
-        <!-- TECHNOLOGY SECTION -->
-<section id="tech">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span>Инженерное превосходство</span>
-            <h2>Строим дома по каркасной технологии</h2>
-        </div>
-        <div class="tech-grid" style="align-items: center;">
-            
-            <!-- Левая колонка: Фото экстерьера с наложенным чертежом -->
-            <div class="tech-visuals" data-aos="fade-right" style="position: relative; padding-bottom: 50px; padding-right: 50px;">
-                <!-- Основное фото дома (высокое качество, четкое) -->
-                <div style="width: 100%; height: 480px; overflow: hidden; border-radius: 4px; border: 1px solid var(--border-color);">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=85&w=1400&auto=format&fit=crop" alt="Современный каркасный дом" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                
-                <!-- Плавающий чертеж поверх фото (ЗАМЕНЕНО НА ВАШЕ ИЗОБРАЖЕНИЕ) -->
-                <div style="position: absolute; bottom: 0; right: 0; width: 220px; height: 260px; background: #141414; border: 1px solid var(--accent); border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); padding: 12px;">
-                    <img src="https://unsplash.com" alt="Архитектурный чертеж каркаса" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.95;">
-                    <div style="position: absolute; bottom: 18px; left: 18px; background: rgba(12,12,12,0.85); padding: 4px 8px; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); border: 1px solid var(--border-color);">
-                        Схема узла
-                    </div>
-                </div>
-            </div>
+        /* TECHNOLOGY */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
 
-            <!-- Правая колонка: Анимированные плашки с текстом -->
-            <div class="tech-cards" data-aos="fade-left">
-                <div class="tech-card">
-                    <h3>Высокая прочность</h3>
-                    <p>Многоуровневый силовой каркас не подвержен образованию трещин и деформаций при сезонных подвижках грунта.</p>
-                </div>
-                <div class="tech-card">
-                    <h3>Премиальная теплоизоляция</h3>
-                    <p>Дома быстро отапливаются зимой и сохраняют прохладу летом благодаря бесшовной эко-вате и минеральным плитам.</p>
-                </div>
-                <div class="tech-card">
-                    <h3>Полное отсутствие усадки</h3>
-                    <p>Возможность заехать и начать внутреннюю отделку сразу после завершения монтажа несущего контура.</p>
-                </div>
-            </div>
+        .tech-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
 
-        </div>
-    </div>
-</section>
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: var(--transition);
+        }
+
+        .tech-image:hover img {
+            transform: scale(1.03);
+            filter: grayscale(0%);
+        }
+
+        .tech-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .tech-card {
+            background: var(--surface-card);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .tech-card:hover {
+            border-color: var(--accent);
+            transform: translateX(6px);
+        }
+
+        .tech-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .tech-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
 
         /* CATALOG */
         .catalog-grid {
